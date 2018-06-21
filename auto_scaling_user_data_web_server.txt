@@ -1,0 +1,12 @@
+#! /bin/bash
+export WORKON_HOME=~/.virtualenvs
+VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+source /usr/local/bin/virtualenvwrapper.sh
+source /home/ubuntu/.virtualenvs/mpcs/bin/activate
+pip install simplejson
+cd /home/ubuntu/
+aws s3 cp s3://mpcs-students/rzhou12/gas_web_server.zip /home/ubuntu/
+unzip gas_web_server.zip
+source /home/ubuntu/gas/.env
+chown -R ubuntu:ubuntu /home/ubuntu/gas
+sudo -u ubuntu /home/ubuntu/gas/run_gas.sh console

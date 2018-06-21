@@ -1,0 +1,53 @@
+<!--Display job details-->
+
+{% extends "base.html" %}
+{% block title %}Annotations{% endblock %}
+{% block body %}
+{% include "header.html" %}
+
+<div class="container">
+  <div class="page-header">
+    <h2>Annotation Details</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        {% if response %}
+        <b>Request ID</b>: {{ response['job_id'] }}
+        <br>
+        <b>Request Time</b>: {{ response['submit_time'] }}
+        <br>
+        <b>VCF File Name</b>: <a href="{{input_ann}}">{{ response['input_file_name']}}</a>
+        <br>
+        <b>Status</b>: {{ response['job_status'] }}
+        {% if response['complete_time'] %}
+        <br>
+        <b>Complete Time</b>: {{ response['complete_time'] }}
+        {% endif %} 
+        {% else %}
+          <p>No Job.</p>
+        {% endif %}
+      </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      {% if result_url == 'upgrade'%}
+        <b>Annotated Results File</b>: <a href="{{url_for('subscribe')}}">upgrade to Premium for download </a>
+      {% else%}
+        <b>Annotated Results File</b>: <a href="{{result_url}}">Download </a>
+      {%endif%}
+     <br>
+     <b>Annotated Log File</b>: <a href="{{url_for('annotation_log', id=response['job_id'])}}">View</a>
+    </div>
+  </div>
+    <hr>
+      <div class="row">
+      <div class="col-md-12">
+          <p><a href="{{url_for('annotations_list')}}">&larr; Back to annotations list</a></p>
+      </div>
+    </div>
+
+
+</div> <!-- container -->
+
+{% endblock %}
