@@ -4,6 +4,14 @@
 
 Make use of various clouds services running on Amazon Web Services.
 
+## Key Functions
+
+- **Log in** (via Globus Auth)
+	Some aspects of the service are avaliable only to registered users. Two classes of users will be supported: *Free* and *Premium*. 
+	Premium users will have access to additional functionality, beyond that avaliable to Free users
+
+- **Convert from a Free to a Premium user**
+
 ### Refrences
 
 http://boto3.readthedocs.io/en/latest/reference/services/glacier.html#Glacier.Client.initiate_job
