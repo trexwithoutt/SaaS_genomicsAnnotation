@@ -7,10 +7,13 @@ Make use of various clouds services running on Amazon Web Services.
 ## Key Functions
 
 - **Log in** (via Globus Auth)
+
 	Some aspects of the service are avaliable only to registered users. Two classes of users will be supported: *Free* and *Premium*. 
 	Premium users will have access to additional functionality, beyond that avaliable to Free users
 
 - **Convert from a Free to a Premium user**
+
+	Premium users will be required to provide a credit card for payment of the service subscription. The GAS will integrate with Stripe (www.stripe.com) for credit card payment processing. No real credit cards are required for the project. 
 
 ### Refrences
 
