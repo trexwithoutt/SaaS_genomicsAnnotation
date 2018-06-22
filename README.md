@@ -37,6 +37,10 @@ The GAS will comprise the following components:
 
 	- A low cost, highly-durable object store for archiving the data of Free users
 
+The diagram below shows the various GAS components and interactions:
+
+<img src="https://github.com/trexwithoutt/SaaS_genomicsAnnotation/blob/master/config.png">
+
 ## Refrences
 
 http://boto3.readthedocs.io/en/latest/reference/services/glacier.html#Glacier.Client.initiate_job
