@@ -23,7 +23,9 @@ Make use of various clouds services running on Amazon Web Services.
 
 	When their annotation request is complete, the GAS will send users an email that includes a link where they can view/download the result/log files
 
-- 
+- **Browse jobs and download annotation results**
+
+	The GAS will store annotation results for later retrieval. Users may view a list of their jobs. Freeusers may download results up to 30 min after their job has completed; thereafter their results will be archived and only available to them if they convert to a Premium user. Premium users will always have all their data available for download.
 
 
 ### Refrences
