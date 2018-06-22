@@ -15,6 +15,10 @@ Make use of various clouds services running on Amazon Web Services.
 
 	Premium users will be required to provide a credit card for payment of the service subscription. The GAS will integrate with Stripe (www.stripe.com) for credit card payment processing. No real credit cards are required for the project. 
 
+- **Submit an annotation job**
+	
+	
+
 ### Refrences
 
 http://boto3.readthedocs.io/en/latest/reference/services/glacier.html#Glacier.Client.initiate_job
