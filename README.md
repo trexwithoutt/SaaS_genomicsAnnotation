@@ -21,7 +21,9 @@ Make use of various clouds services running on Amazon Web Services.
 
 - **Receive notifications when annotation jobs finish**
 
-	
+	When their annotation request is complete, the GAS will send users an email that includes a link where they can view/download the result/log files
+
+- 
 
 
 ### Refrences
