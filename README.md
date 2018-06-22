@@ -27,8 +27,17 @@ Make use of various clouds services running on Amazon Web Services.
 
 	The GAS will store annotation results for later retrieval. Users may view a list of their jobs. Freeusers may download results up to 30 min after their job has completed; thereafter their results will be archived and only available to them if they convert to a Premium user. Premium users will always have all their data available for download.
 
+## System Components
 
-### Refrences
+The GAS will comprise the following components:
+	
+	- An object store for input files, annotated files, and job log files
+
+	- A key-value store for persisting information on annotation jobs
+
+	- A low cost, highly-durable object store for archiving the data of Free users
+
+## Refrences
 
 http://boto3.readthedocs.io/en/latest/reference/services/glacier.html#Glacier.Client.initiate_job
 
