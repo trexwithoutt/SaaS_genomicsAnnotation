@@ -37,9 +37,16 @@ The GAS will comprise the following components:
 
 	- A low cost, highly-durable object store for archiving the data of Free users
 
+	- A relational database for user account information
+
+	- A service that runs AnnTools for annotation
+
+	- 
 The diagram below shows the various GAS components and interactions:
 
 <img src="https://github.com/trexwithoutt/SaaS_genomicsAnnotation/blob/master/config.png">
+
+
 
 ## Refrences
 
