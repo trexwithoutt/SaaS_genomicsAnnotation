@@ -45,12 +45,14 @@ The GAS will comprise the following components:
 
 	- A set of message queues and notification tioics for managing various system activities
 
-	-
 The diagram below shows the various GAS components and interactions:
 
 <img src="https://github.com/trexwithoutt/SaaS_genomicsAnnotation/blob/master/config.png">
 
 
+## GAS Scalability
+
+We anticipate that the GAS will be in very high demand (since it’s a brilliant system developed by brilliant students), and that demand will be variable over the course of any given time period. Hence, the GAS will use elastic compute infrastructure to minimize cost during periods of low demand and to meet expected user service levels during peak demand periods. We will build elasticity into two areas of the GAS:
 
 ## Refrences
 
