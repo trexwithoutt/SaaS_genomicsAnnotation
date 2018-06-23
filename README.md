@@ -41,7 +41,11 @@ The GAS will comprise the following components:
 
 	- A service that runs AnnTools for annotation
 
-	- 
+	- A web application for users to interact with the GAS
+
+	- A set of message queues and notification tioics for managing various system activities
+
+	-
 The diagram below shows the various GAS components and interactions:
 
 <img src="https://github.com/trexwithoutt/SaaS_genomicsAnnotation/blob/master/config.png">
