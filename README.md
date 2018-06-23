@@ -54,6 +54,10 @@ The diagram below shows the various GAS components and interactions:
 
 We anticipate that the GAS will be in very high demand (since it’s a brilliant system developed by brilliant students), and that demand will be variable over the course of any given time period. Hence, the GAS will use elastic compute infrastructure to minimize cost during periods of low demand and to meet expected user service levels during peak demand periods. We will build elasticity into two areas of the GAS:
 
+	1. On the front end, the web application will be delivered by multiple servers running within a load balancer. All requests will be received at a single domain name/IP address, namely that of the load balancer. The load balancer will distribute requests across a pool of identically configured, stateless , web servers running on EC2 instances. At minimum, the load balancer will have two web server instances running across two availability zones, providing capacity and ensuring availability in the event of failure. If demand on either web server exceeds certain thresholds, the GAS will automatically launch additional web servers and place them in the load balancer pool. When demand remains below a certain threshold for a specified period of time, the GAS will terminate the excess web servers
+
+	2. On the back end, the annotator service will be delivered by multiple servers (optionally running within a separate virtual private cloud). At minimum this pool of socalled “worker nodes” will contain two nodes (EC2 instances). Additional instances will be launched and added to (or removed from) the worker pool, based on the number of requests in the job queue. The annotator servers store the state of running jobs locally (as implemented in homework assignments) in this sense they are not stateless like the web app servers. If a job fails to complete it will leave the system in an inconsistent state, but it’s a state from which we can recover relatively easily.
+
 ## Refrences
 
 http://boto3.readthedocs.io/en/latest/reference/services/glacier.html#Glacier.Client.initiate_job
